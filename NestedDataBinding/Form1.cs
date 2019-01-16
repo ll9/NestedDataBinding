@@ -1,4 +1,5 @@
-﻿using System;
+﻿using NestedDataBinding.Models;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -15,6 +16,7 @@ namespace NestedDataBinding
         public Form1()
         {
             InitializeComponent();
+            personBindingSource.DataSource = new Person { Address = new Address() };
         }
     }
 }
